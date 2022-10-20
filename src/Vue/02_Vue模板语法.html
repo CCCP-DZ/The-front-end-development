@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue模板语法</title>
+    <script src="../js/vue (1).js" type="text/javascript"></script>
+    <link rel="icon" href="../favicon32.ico">
+</head>
+<body>
+    <div id="root">
+        <!-- 文本节点：插值语法{{}} 解析标签内容-->
+        <h1>你好 {{name}} </h1><br>
+
+        <!-- 属性节点：模板语法 v-bind  解析标签属性-->
+        <!-- 对于重复使用的变量,可以在data中多级表示 -->
+        请输入年龄：<input type="text" v-bind:value="age"><br>
+
+        请输入姓名：<input type="text" v-bind:value="school.name">
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: "#root",
+            data:{
+                name:"anshan",
+                age:"18",
+                school:{
+                    name:"huijuan",
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

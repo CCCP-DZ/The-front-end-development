@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el和data的两种写法</title>
+    <script src="../js/vue (1).js" type="text/javascript"></script>
+    <link rel="icon" href="../favicon32.ico">
+</head>
+<body>
+    <div id="root">
+        <h1>hello {{name}}</h1>
+    </div>
+
+    <script type="text/javascript">
+        const v = new Vue({
+            // 1.el的写法
+            // el:"#root",
+
+            // 1.对象式
+            // data:{
+            //     name:"huijuan"
+            // }
+
+            // 2. 函数式
+            data:function(){
+                return {
+                    name:"huijuan"
+                }
+                
+            }
+        })
+        // 2.生成实例,利用属性定位
+        v.$mount("#root")
+
+    </script>
+
+
+
+</body>
+</html>

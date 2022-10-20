@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon32.ico">
+    <title>初始Vue</title>
+    <!-- 引入Vue -->
+    <script src="../js/vue (1).js"></script>
+</head>
+<body>
+    <!-- 初识Vue：
+    1.想让Vue工作,就必须创建一个Vue实例,且要传入一个配置对象
+    2.root容器里面依然遵守HTML规范,只不过混入了Vue语法
+    3.root容器里面的代码被称为Vue模板 
+    4.Vue实例和容器是一一对应的
+    5.真实开发中只有一个Vue实例,并且会配合组件一起使用
+    6.{{}} 插值语法取数据,读data中的数据
+    7.data中的数据一旦变化,页面中的数据会自动更新.
+-->
+
+
+    <div id="root">
+        <h1>hello, {{name}}</h1>
+    </div>
+
+    <script type="text/javascript">
+    new Vue({
+        el:"#root",
+        data:{
+            name:"anshan"
+        }
+    })
+
+    </script>
+    
+</body>
+</html>
